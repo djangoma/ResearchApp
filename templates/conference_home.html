@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Conference</li>
+{% endblock %}
+
+
+{% block summary%}
+	
+	<br>
+	<p>International = {{conferenceinternationalcount}}</p>
+	<p>National = {{conferencenationalcount}}</p>
+	
+	<p>2017 = {{year2017}}</p>
+	
+	<br>
+	<a href = "{% url 'searchconference'%}">Search</a>
+	
+{% endblock%}
+
+
+{% block content %}
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <!--<th>F.Author</th>
+        <th>Co-Author</th>
+        <th>Paper Title</th>
+        <th>Journal Name</th>-->
+		<th>List of Conference Proceedings ({{conferencecount}})</th>
+      </tr>
+    </thead>
+    {% for conference in c %}
+        <tr>
+          <td> <a href="{% url 'conference_detail' conference.pk %}">{{ conference.refformat }}</a> </td>
+        </tr>
+    {% endfor %}
+  </table>
+  
+  
+  {% if c.has_other_pages %}
+  <nav aria-label="Topics pagination" class="mb-4">
+    <ul class="pagination">
+      {% if c.has_previous %}
+        <li class="page-item">
+		  <a class="page-link" href="?page={{ c.previous_page_number }}">Previous</a>
+		  <a class="page-link" href="?page=1">&laquo; First</a>
+          
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Previous</span>
+        </li>
+      {% endif %}
+
+       Page {{ c.number }} of {{ c.paginator.num_pages }}
+
+      {% if c.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ c.next_page_number }}">Next</a>
+		  <a class="page-link" href="?page={{ c.paginator.num_pages }}"> Last&raquo;</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Next</span>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
+
+  <br><br>
+  <br>
+	  <br>
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'conference_new' %}">Add new</a></button>
+	  <br><br>
+	  <p>Total conference article = {{conferencecount}}</p>
+	  <p></p>
+{% endblock %}

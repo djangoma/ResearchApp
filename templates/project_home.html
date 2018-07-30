@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Project</li>
+{% endblock %}
+
+{% block summary%}
+	
+	<em><p>External</p></em>
+	<li>Ongoing = {{projextongoingcount}}</li>
+	<li>Completed = {{projextcomplettedcount}}</li><br>
+	<em><p>Internal-Faculty</p></em>
+	<li>Ongoing = {{projintongoingfacultycount}}</li>
+	<li>Completed = {{projintcompletedfacultycount}}</li><br>
+	<em><p>Internal-Student<p></em>
+	<li>Ongoing = {{projintongoingstudentcount}}</li>
+	<li>Completed = {{projintcompletedstudentcount}}</li>
+	
+	<br>
+	<a href = "{% url 'searchproject'%}">Search</a>
+
+{% endblock%}
+
+
+{% block content %}
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <!--<th>F.Author</th>
+        <th>Co-Author</th>
+        <th>Paper Title</th>
+        <th>Journal Name</th>-->
+		<th>Projects</th>
+		<th>Category</th>
+      </tr>
+    </thead>
+    {% for project in p %}
+        <tr>
+          <td> <a href="{% url 'project_detail' project.pk %}">{{ project.projecttitle }}</a> </td>
+		  <td> {{project.projectcategory}}</a></td>
+        </tr>
+      {% endfor %}
+  </table>
+  
+  {% if p.has_other_pages %}
+  <nav aria-label="Topics pagination" class="mb-4">
+    <ul class="pagination">
+      {% if p.has_previous %}
+        <li class="page-item">
+			
+			<a class="page-link" href="?page={{ p.previous_page_number }}">Previous</a>
+			<a class="page-link" href="?page=1">&laquo; First</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Previous</span>
+        </li>
+      {% endif %}
+
+      
+	  Page {{ p.number }} of {{ p.paginator.num_pages }}
+
+      {% if p.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ p.next_page_number }}">Next</a>
+		  <a class="page-link" href="?page={{ p.paginator.num_pages }}"> Last&raquo;</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Next</span>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
+  <br><br>
+  <br>
+	  <br>
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'project_new' %}">Add new</a></button>
+	  <br><br>
+	  
+	  <p></p>
+{% endblock %}

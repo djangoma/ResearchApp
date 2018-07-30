@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Add a New Journal{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Journal</a></li>
+  <!--<li class="breadcrumb-item"><a href=""></a></li>-->
+  <li class="breadcrumb-item active">Add Journal</li>
+{% endblock %}
+
+{% block content %}
+<p>This is a new Journal </p>
+<form method="post">
+    {% csrf_token %}
+	{% include 'includes/form.html' %}
+    <!--{{form.as_p}}-->
+    <button type="submit" class="btn btn-success">Add</button>
+  </form>
+{% endblock %}

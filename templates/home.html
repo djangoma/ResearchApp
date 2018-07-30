@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<!--<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Journal</title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    
+	<div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item active">Journal</li>
+      </ol>
+    
+    {% for journal in journals %}
+      <a href="{% url 'journal_detail' journal.pk %}">{{ journal.jpapertitle }}</a> <br>
+	  
+    {% endfor %}
+	<br>
+	<br>
+	<p> The number of journals = </p>
+	
+	<br>
+	<br>
+	<button type="submit" class="btn btn-success">Add new</button>
+</div>
+  </body>
+</html>-->
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Journals</li>
+
+{% endblock %}
+
+{% block summary%}
+	<br>
+	<p>Published = {{publishedcount}}</p>
+	<p>Accepted = {{acceptedcount}}</p>
+	<p>Submitted = {{submittedcount}}</p>
+	<p>2017 = {{year2017}}</p>
+	<br>
+	<br>
+	<a href = "{% url 'searchjournal'%}">Search</a>
+	
+{% endblock%}
+
+
+{% block content %}
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <!--<th>F.Author</th>
+        <th>Co-Author</th>
+        <th>Paper Title</th>
+        <th>Journal Name</th>-->
+		<th>List of Journal Publications ({{journalcount}})  <a href="{% url 'journal_new' %}" ><span class="glyphicon glyphicon-plus"></span></a></th>
+		
+      </tr>
+    </thead>
+    <tbody>
+      {% for journal in j %}
+        <tr>
+          <!--<td>
+            <small class="text-muted d-block">0</small>
+          </td>
+		  <td>0</td>
+          <td class="align-middle"><a href="{% url 'journal_detail' journal.pk %}">{{ journal.jtitle }}</a></td>
+          <td class="align-middle">{{ journal.jname }}</td>-->
+          <td> <a href="{% url 'journal_detail' journal.pk %}">{{ journal.get_refformat_as_markdown }}</a> </td>
+        </tr>
+      {% endfor %}
+	  
+    </tbody>
+  </table>
+ {% if j.has_other_pages %}
+  <nav aria-label="Topics pagination" class="mb-4">
+    <ul class="pagination">
+      {% if j.has_previous %}
+        <li class="page-item">
+			
+			<a class="page-link" href="?page={{ j.previous_page_number }}">Previous</a>
+			<a class="page-link" href="?page=1">&laquo; First</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Previous</span>
+        </li>
+      {% endif %}
+
+       Page {{ j.number }} of {{ j.paginator.num_pages }}
+
+      {% if j.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ j.next_page_number }}">Next</a>
+		  <a class="page-link" href="?page={{ j.paginator.num_pages }}"> Last&raquo;</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Next</span>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
+
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'journal_new' %}">Add new</a></button>
+	  <br><br>
+	  <p>Total journal article = {{publishedcount}}</p>
+	   
+	  <p></p>
+	  <p></p>
+{% endblock %}

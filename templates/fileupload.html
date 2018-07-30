@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<!--<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Journal</title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    
+	<div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item active">Journal</li>
+      </ol>
+    
+    {% for journal in journals %}
+      <a href="{% url 'journal_detail' journal.pk %}">{{ journal.jpapertitle }}</a> <br>
+	  
+    {% endfor %}
+	<br>
+	<br>
+	<p> The number of journals = </p>
+	
+	<br>
+	<br>
+	<button type="submit" class="btn btn-success">Add new</button>
+</div>
+  </body>
+</html>-->
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Journals</li>
+
+{% endblock %}
+
+{% block summary%}
+	
+	
+{% endblock%}
+
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+	</form>
+<p><a href="{% url 'home' %}">Return to home</a></p>	
+{% endblock %}

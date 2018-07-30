@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ journal.jtitle }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Journals</a></li>
+  <li class="breadcrumb-item active">{{ journal.jtitle }}</li>
+{% endblock %}
+
+{% block content %}
+    <!-- just leaving it empty for now. we will add core here soon. -->
+	<li> {{journal.jtitle}}</li>
+	<li> {{journal.jpublishedon}}</li>
+	
+	<li> Faculty Authors : 
+		{% for fa in falist %}
+		{{fa.facultyname}}, 
+		{% endfor %}
+	</li>
+	
+	<li> Student Authors : 
+		{% for sa in salist %}
+		{{sa.sname}}, 
+		{% endfor %}
+	</li>
+	
+	<li>Research Scholars : 
+		{% for rs in rslist %}
+		{{rs.rsname}} 
+		{% endfor %}
+	</li>
+	
+	<li>TR Impact factor = {{journal.jtr}}</li>
+	<li>Scopus SJR = {{journal.jsjr}}</li>
+	<li>Scopus SNIP = {{journal.jsnip}}</li>
+	<li>ISSN Number = {{journal.jissn}}</li>
+	
+	<br>
+	  <br>
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'journal_update' journal.pk %}">Update</a></button>
+	  
+	  <a class="btn btn-default" href="{% url 'journal_update' journal.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+	  
+	  
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'journal_delete' journal.pk %}">Delete</a></button>
+	  <br>
+	  <br>
+				
+{% endblock %}
+
+
+
+<!--{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ journal.jpapertitle }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Journal</a></li>
+        <li class="breadcrumb-item active">{{ journal.jpapertitle }}</li>
+      </ol>
+    </div>
+  </body>
+</html>-->

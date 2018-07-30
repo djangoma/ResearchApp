@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ bookseries.booktitle }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'bookseries_home' %}">Book Series</a></li>
+  <li class="breadcrumb-item active">{{ bookseries.booktitle }}</li>
+{% endblock %}
+
+{% block content %}
+    <!-- just leaving it empty for now. we will add core here soon. -->
+	<li> {{bookseries.booktitle}}</li>
+	<li> {{bookseries.bookname}}</li>
+	<li> {{bookseries.bpublishedon}}</li>
+	<li> Faculty Authors : 
+		{% for fa in falist %}
+		{{fa.facultyname}}, 
+		{% endfor %}
+	</li>
+	
+	<li> Student Authors : 
+		{% for sa in salist %}
+		{{sa.sname}}, 
+		{% endfor %}
+	</li>
+	
+	<li>Research Scholars : 
+		{% for rs in rslist %}
+		{{rs.rsname}} 
+		{% endfor %}
+	</li>
+	
+	<li>Scopus SJR = {{bookseries.bsjr}}</li>
+	<li>Scopus SNIP = {{bookseries.bsnip}}</li>
+	<li>ISSN Number = {{bookseries.bisbn}}</li>
+	
+	<br>
+	  <br>
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'bookseries_update' bookseries.pk %}">Update</a></button>
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'bookseries_delete' bookseries.pk %}">Delete</a></button>
+	  <br>
+	  <br>
+				
+{% endblock %}
+
+
+
+<!--{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ journal.jpapertitle }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Journal</a></li>
+        <li class="breadcrumb-item active">{{ journal.jpapertitle }}</li>
+      </ol>
+    </div>
+  </body>
+</html>-->

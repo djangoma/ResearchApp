@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block breadcrumb %}
+  <li class="breadcrumb-item">Search in Journals</a></li>
+  
+{% endblock %}
+
+{% block content %}
+
+<form action="" method="get">
+{{ j_filter.form.as_p }}
+</form>	
+
+
+{{j_filter}}
+
+
+
+<button type = "submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span>search</button>
+
+
+
+
+
+
+{%endblock%}

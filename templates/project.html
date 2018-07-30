@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ project.projecttitle }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'project_home' %}">Project</a></li>
+  <li class="breadcrumb-item active">{{ project.projecttitle }}</li>
+{% endblock %}
+
+{% block content %}
+    <!-- just leaving it empty for now. we will add core here soon. -->
+	<li> Principal Investigator: 
+		{% for fa in fapilist %}
+		{{fa.facultyname}}, 
+		{% endfor %}
+	</li>
+	
+	<li> Co-Principal Investigator: 
+		{% for fa in facopilist %}
+		{{fa.facultyname}}, 
+		{% endfor %}
+	</li>
+	
+	<li> Project Title: {{project.projecttitle}}</li>
+	<li> Project Category: {{project.projectcategory}}</li>
+	<li> Project Status: {{project.projectstatus}}</li>
+	<li> Funding Agency: {{project.fundingagency}}</li>
+	
+	
+	<li>Duration = {{project.duration}}</li>
+	<li>Sanctioned Date = {{project.sanctioneddate}}</li>
+	<li>Sanctioned Amount = {{project.sanctionedamount}}</li>
+	
+	<li> Students: 
+		{% for sa in salist %}
+		{{sa.sname}}, 
+		{% endfor %}
+	</li>
+	
+	<li>Research Scholars: 
+		{% for rs in rslist %}
+		{{rs.rsname}} 
+		{% endfor %}
+	</li>
+	
+	<br>
+	  <br>
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'project_update' project.pk %}">Update</a></button>
+	  <button type="submit" class="btn btn-default" ><a href="{% url 'project_delete' project.pk %}">Delete</a></button>
+	  <br>
+	  <br>
+	  
+				
+{% endblock %}
+
+
+
+<!--{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ journal.jpapertitle }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Journal</a></li>
+        <li class="breadcrumb-item active">{{ journal.jpapertitle }}</li>
+      </ol>
+    </div>
+  </body>
+</html>-->

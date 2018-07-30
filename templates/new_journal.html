@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}A New Journal{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Journal</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'new_journal' journal.pk %}">{{ journal.jpapertitle }}</a></li>
+  <li class="breadcrumb-item active">New Journal</li>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

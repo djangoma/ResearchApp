@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete a Journal{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Journal</a></li>
+  <!--<li class="breadcrumb-item"><a href=""></a></li>-->
+  <li class="breadcrumb-item active">Delete Journal</li>
+{% endblock %}
+
+{% block content %}
+
+	<p> Are you sure you want to delete the journal titled {{journal.jtitle}} ?</p>
+	
+    <button type="submit" class="btn btn-default">Yes</button>
+	<button type="submit" class="btn btn-deafult"> <a href="{% url 'home' %}"> No</a></button>
+{% endblock %}

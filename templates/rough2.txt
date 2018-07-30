@@ -1,0 +1,28 @@
+<!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+	
+	, name='searchproject'
+	
+	<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Hello</h1>
+  </head>
+  <body>
+	<h2>Hi</h2>
+  </body>
+</html>
+
+<ul>
+{% for j in j_filter.qs %}
+<li>{{j.refformat}}</li>
+{% endfor %}
+</ul>
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/app.css' %}">
+	
+	url(r'^searchjournal/$', views.searchjournal, name='searchjournal'),
+	url(r'^searchjournal/$', FilterView.as_view(filterset_class = JournalArticleFilter, template_name='/search/ra.html'), name='searchjournal'),
+	
+	j_filter = JournalArticleFilter(request.GET, queryset=j_list)

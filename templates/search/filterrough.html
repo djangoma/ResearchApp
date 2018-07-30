@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<form method = "get">
+<div class="well">
+<h4 style="margin-top: 0">Filter</h4>
+<div class="row">
+
+		<div class="form-group col-sm-4 col-md-3">
+          {{ faculty_filter.form.facultyname.label_tag }}
+          {% render_field faculty_filter.form.facultyname class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ faculty_filter.form.deptname.label_tag }}
+          {% render_field faculty_filter.form.deptname class="form-control" %}
+        </div>
+		
+		
+		<div class="form-group col-sm-4 col-md-3">
+          {{ student_filter.form.sname.label_tag }}
+          {% render_field student_filter.form.sname class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ student_filter.form.sregno.label_tag }}
+          {% render_field student_filter.form.sregno class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ student_filter.form.studentcategory.label_tag }}
+          {% render_field student_filter.form.studentcategory class="form-control" %}
+        </div>
+		
+		<div class="form-group col-sm-4 col-md-3">
+          {{ rs_filter.form.rsname.label_tag }}
+          {% render_field rs_filter.form.rsname class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ rs_filter.form.rsregno.label_tag }}
+          {% render_field rs_filter.form.rsregno class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ rs_filter.form.rssupervisor.label_tag }}
+          {% render_field rs_filter.form.rssupervisor class="form-control" %}
+        </div>
+		
+		
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.facultyauthor.label_tag }}
+          {% render_field j_filter.form.facultyauthor class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.studentauthor.label_tag }}
+          {% render_field j_filter.form.studentauthor class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.rsauthor.label_tag }}
+          {% render_field j_filter.form.rsauthor class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.jtr.label_tag }}
+          {% render_field j_filter.form.jtr class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.jsjr.label_tag }}
+          {% render_field j_filter.form.jsjr class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.jsnip.label_tag }}
+          {% render_field j_filter.form.jsnip class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.jissn.label_tag }}
+          {% render_field j_filter.form.jissn class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.jstatus.label_tag }}
+          {% render_field j_filter.form.jstatus class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.jpublishedon__gte.label_tag }}
+          {% render_field j_filter.form.jpublishedon__gt class="form-control" %}
+        </div>
+		<div class="form-group col-sm-4 col-md-3">
+          {{ j_filter.form.jpublishedon__lte.label_tag }}
+          {% render_field j_filter.form.jpublishedon__lt class="form-control" %}
+        </div>
+		
+<!--{{faculty_filter.form.as_p}}
+{{student_filter.form.as_p}}
+{{rs_filter.form.as_p}}
+{{j_filter.form.as_p}}-->
+
+</div>
+<button type = "submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span>search</button>
+</div>
+</form>
+<ul>
+{% for faculty in faculty_filter.qs %}
+<li>{{faculty.facultyname}}-{{faculty.username}}-{{faculty.empid}}</li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for student in student_filter.qs %}
+<li>{{student.sname}}-{{student.sregno}}-{{student.studentcategory}}</li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for rs in rs_filter.qs %}
+<li>{{rs.rsname}}-{{rs.rsregno}}-{{rs.rssupervisor}}</li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for j in j_filter.qs %}
+<li>{{j.refformat}}</li>
+{% endfor %}
+</ul>
+{%endblock%}
