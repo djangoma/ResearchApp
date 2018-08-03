@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 	'accounts',
 	'import_export',
 	'django_filters',
+	'gunicorn',
 ]
 
 MIDDLEWARE = [
