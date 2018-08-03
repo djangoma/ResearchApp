@@ -64,12 +64,12 @@ class ResearchScholar(models.Model):
 		
 class JournalArticle(models.Model):
 	
-	refformat=models.TextField(verbose_name="Citation Format",max_length=500,blank=False)
-	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author",max_length=100)
-	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",max_length=100,blank=True)
-	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",max_length=100,blank=True)
-	jtitle = models.CharField(verbose_name="Paper Title",max_length=200,blank=False,default='')
-	jname = models.CharField(verbose_name="Journal Name",max_length=200,blank=False,default='')
+	refformat=models.TextField(verbose_name="Citation Format",max_length=300,blank=False)
+	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author",max_length=30)
+	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",max_length=30,blank=True)
+	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",max_length=30,blank=True)
+	jtitle = models.CharField(verbose_name="Paper Title",max_length=50,blank=False,default='')
+	jname = models.CharField(verbose_name="Journal Name",max_length=50,blank=False,default='')
 	Accepted = 'Accepted'
 	Submitted = 'Submitted'
 	Published = 'Published'
@@ -123,12 +123,12 @@ class JournalArticle(models.Model):
 	display_rsauthor.short_description = 'RS Name'
 		
 class ConferenceArticle(models.Model):
-	refformat=models.TextField(verbose_name="Citation Format",max_length=500,blank=False)
-	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author",max_length=100)
-	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",max_length=100,blank=True)
-	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",max_length=100,blank=True)
-	ctitle = models.CharField(verbose_name="Paper Title",max_length=200,blank=False,default='')
-	cname = models.CharField(verbose_name="Conference Name",max_length=200,blank=False,default='')
+	refformat=models.TextField(verbose_name="Citation Format",max_length=300,blank=False)
+	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author",max_length=30)
+	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",max_length=30,blank=True)
+	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",max_length=30,blank=True)
+	ctitle = models.CharField(verbose_name="Paper Title",max_length=50,blank=False,default='')
+	cname = models.CharField(verbose_name="Conference Name",max_length=50,blank=False,default='')
 	presentedby=models.CharField(verbose_name="Presented By",max_length=50)
 	NATIONAL='National'
 	INTERNATIONAL='International'
@@ -136,7 +136,7 @@ class ConferenceArticle(models.Model):
 	conferencecategory=models.CharField(verbose_name="Conference Category",max_length=50,choices=conferencecategory_choice, default=INTERNATIONAL)
 	cdatefrom=models.DateField(verbose_name="Conference Date From: ")
 	cdateto=models.DateField(verbose_name="Conference Date To: ")
-	venue=models.CharField(verbose_name="Venue",max_length=100)
+	venue=models.CharField(verbose_name="Venue",max_length=50)
 	country = models.CharField(verbose_name="Country", max_length=50)
 	csjr = models.FloatField(verbose_name="SJR", null=True, blank=True)
 	csnip = models.FloatField(verbose_name="SNIP", null=True, blank=True)
@@ -174,7 +174,7 @@ class ConferenceArticle(models.Model):
 	display_rsauthor.short_description = 'RS Name'
 
 class BookSeries(models.Model):
-	refformat=models.TextField(verbose_name="Citation Format",max_length=500,blank=False)
+	refformat=models.TextField(verbose_name="Citation Format",max_length=300,blank=False)
 	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author")
 	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",blank=True)
 	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",blank=True)
@@ -219,13 +219,13 @@ class Project(models.Model):
 	facultycopi = models.ManyToManyField('Faculty', verbose_name="Co-Principal Investigator", related_name = 'projectcopis', blank = True)
 	student = models.ManyToManyField('Student',verbose_name="Student",blank=True)
 	rs = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar",blank=True)
-	projecttitle = models.CharField(verbose_name="Project Title",max_length=200)
-	fundingagency=models.CharField(verbose_name="Funding Agency",max_length=200)
+	projecttitle = models.CharField(verbose_name="Project Title",max_length=100)
+	fundingagency=models.CharField(verbose_name="Funding Agency",max_length=100)
 	EXTERNAL='External'
 	INTERNALFACULTY='Internal Faculty'
 	INTERNALSTUDENT='Internal Student'
 	projectcategory_choice=((EXTERNAL,'External'),(INTERNALFACULTY,'Internal Faculty'),(INTERNALSTUDENT,'Internal Student'),)
-	projectcategory=models.CharField(verbose_name="Project Category",max_length=50,choices=projectcategory_choice, default=EXTERNAL)
+	projectcategory=models.CharField(verbose_name="Project Category",max_length=20,choices=projectcategory_choice, default=EXTERNAL)
 	
 	SUBMITTED='Submitted'
 	ONGOING='Ongoing'
@@ -233,14 +233,14 @@ class Project(models.Model):
 	RESULTSPENDING = 'Results Pending'
 	REJECTED = 'Rejected'
 	projectstatus_choice=((SUBMITTED,'Submitted'),(ONGOING,'Ongoing'),(COMPLETED,'Completed'),(RESULTSPENDING,'Results Pending'),(REJECTED,'Rejected'),)
-	projectstatus=models.CharField(verbose_name="Project Status",max_length=50,choices=projectstatus_choice, default=ONGOING)
+	projectstatus=models.CharField(verbose_name="Project Status",max_length=20,choices=projectstatus_choice, default=ONGOING)
 	duration=models.CharField(verbose_name="Duration",max_length=50)
 	sanctioneddate=models.DateField(verbose_name="Sanctioned Date")
 	sanctionedamount=models.FloatField(verbose_name="Sanctioned Amount",blank = True, null = True)
 	fundreleasedon=models.CharField(verbose_name="Fund Released On",max_length=20, blank=True, null = True)
 	amountreceived=models.CharField(verbose_name="Amount Received",max_length=200, blank=True, null = True)
 	completiondate=models.DateField(verbose_name="Completion Date", blank = True, null = True)
-	outcome=models.TextField(verbose_name="Outcome",max_length=500, blank=True)
+	outcome=models.TextField(verbose_name="Outcome",max_length=300, blank=True)
 	created_at = models.DateField(verbose_name="Created At", auto_now_add=True)
 	updated_at = models.DateTimeField(verbose_name="Updated At", null = True)
 	created_by = models.ForeignKey(User, related_name = 'projects', on_delete=models.CASCADE,)
