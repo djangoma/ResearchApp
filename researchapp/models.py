@@ -64,12 +64,12 @@ class ResearchScholar(models.Model):
 		
 class JournalArticle(models.Model):
 	
-	refformat=models.TextField(verbose_name="Citation Format",max_length=300,blank=False)
+	refformat=models.TextField(verbose_name="Citation Format",max_length=500,blank=False)
 	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author",max_length=30)
 	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",max_length=30,blank=True)
 	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",max_length=30,blank=True)
-	jtitle = models.CharField(verbose_name="Paper Title",max_length=50,blank=False,default='')
-	jname = models.CharField(verbose_name="Journal Name",max_length=50,blank=False,default='')
+	jtitle = models.CharField(verbose_name="Paper Title",max_length=200,blank=False,default='')
+	jname = models.CharField(verbose_name="Journal Name",max_length=200,blank=False,default='')
 	Accepted = 'Accepted'
 	Submitted = 'Submitted'
 	Published = 'Published'
@@ -123,12 +123,12 @@ class JournalArticle(models.Model):
 	display_rsauthor.short_description = 'RS Name'
 		
 class ConferenceArticle(models.Model):
-	refformat=models.TextField(verbose_name="Citation Format",max_length=300,blank=False)
+	refformat=models.TextField(verbose_name="Citation Format",max_length=500,blank=False)
 	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author",max_length=30)
 	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",max_length=30,blank=True)
 	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",max_length=30,blank=True)
-	ctitle = models.CharField(verbose_name="Paper Title",max_length=50,blank=False,default='')
-	cname = models.CharField(verbose_name="Conference Name",max_length=50,blank=False,default='')
+	ctitle = models.CharField(verbose_name="Paper Title",max_length=200,blank=False,default='')
+	cname = models.CharField(verbose_name="Conference Name",max_length=200,blank=False,default='')
 	presentedby=models.CharField(verbose_name="Presented By",max_length=50)
 	NATIONAL='National'
 	INTERNATIONAL='International'
@@ -136,7 +136,7 @@ class ConferenceArticle(models.Model):
 	conferencecategory=models.CharField(verbose_name="Conference Category",max_length=50,choices=conferencecategory_choice, default=INTERNATIONAL)
 	cdatefrom=models.DateField(verbose_name="Conference Date From: ")
 	cdateto=models.DateField(verbose_name="Conference Date To: ")
-	venue=models.CharField(verbose_name="Venue",max_length=50)
+	venue=models.CharField(verbose_name="Venue",max_length=100)
 	country = models.CharField(verbose_name="Country", max_length=50)
 	csjr = models.FloatField(verbose_name="SJR", null=True, blank=True)
 	csnip = models.FloatField(verbose_name="SNIP", null=True, blank=True)
@@ -174,7 +174,7 @@ class ConferenceArticle(models.Model):
 	display_rsauthor.short_description = 'RS Name'
 
 class BookSeries(models.Model):
-	refformat=models.TextField(verbose_name="Citation Format",max_length=300,blank=False)
+	refformat=models.TextField(verbose_name="Citation Format",max_length=500,blank=False)
 	facultyauthor = models.ManyToManyField('Faculty',verbose_name="Faculty Author")
 	studentauthor = models.ManyToManyField('Student',verbose_name="Student Author",blank=True)
 	rsauthor = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar Author",blank=True)
@@ -219,8 +219,8 @@ class Project(models.Model):
 	facultycopi = models.ManyToManyField('Faculty', verbose_name="Co-Principal Investigator", related_name = 'projectcopis', blank = True)
 	student = models.ManyToManyField('Student',verbose_name="Student",blank=True)
 	rs = models.ManyToManyField('ResearchScholar',verbose_name="Research Scholar",blank=True)
-	projecttitle = models.CharField(verbose_name="Project Title",max_length=100)
-	fundingagency=models.CharField(verbose_name="Funding Agency",max_length=100)
+	projecttitle = models.CharField(verbose_name="Project Title",max_length=300)
+	fundingagency=models.CharField(verbose_name="Funding Agency",max_length=200)
 	EXTERNAL='External'
 	INTERNALFACULTY='Internal Faculty'
 	INTERNALSTUDENT='Internal Student'
