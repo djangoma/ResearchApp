@@ -70,7 +70,7 @@ def home(request):
 	journals=JournalArticle.objects.all()
 	
 	page = request.GET.get('page', 1)
-	paginator = Paginator(journals, 2)
+	paginator = Paginator(journals, 10)
 	
 	try:
 		j = paginator.page(page)
