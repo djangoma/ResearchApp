@@ -1,0 +1,234 @@
+SSN COLLEGE OF ENGINEERING
+--------------------------
+Department of Information Technology
+------------------------------------
+Journal Publications - Faculty
+-----------------------------------
+
+(2017 – 2018 & 2018 – 2019)
+
+
+Dr. T. Nagarajan : 6
+--------------------------
+
+1) Speech-Input Speech-Output Communication for Dysarthric Speakers Using HMM-Based Speech Recognition and Adaptive Synthesis System  Published on : 2018-02-01
+
+2) A Multilingual to Polyglot Speech Synthesizer for Indian Languages Using a Voice-Converted Polyglot Speech Corpus  Published on : 2018-05-01
+
+3) Significance of Differenced EGG Signal as a Spectrum in Phase-Difference Computation for the Estimation of Glottal Closure Instants  Published on : 2018-05-01
+
+4) Pause-Based Phrase Extraction and Effective OOV Handling for Low-Resource Machine Translation Systems  Published on : 2018-12-01
+
+5) A Weighted Speaker-Specific Confusion Transducer-Based Augmentative and Alternative Speech Communication Aid for Dysarthric Speakers  Published on : 2018-12-01
+
+6) G. Anushiya Rachel, P. Vijayalakshmi, T. Nagarajan, “Estimation of Glottal Closure Instants from Degraded Speech using a Phase-Difference-Based Algorithm”, Computer, Speech, and Language, Vol. 46, pp. 136 – 153, Nov. 2017
+
+Dr. R. Srinivasan : 5
+--------------------------
+
+1) Heavy ion impact on narrow band cascoded low noise amplifier  Published on : 2018-12-01
+2) N. Vinodhkumar, and R. Srinivasan, “SET and SEU performance of Single, Double, Triple and Quadruple-Gate Junctionless FETs Using Numerical Simulations”, Microelectronics Journal (Elsevier Publisher), Vol. 67, pp. 38-42, Sep 2017.
+3) R. Ambika, R. Srinivasan, "Sensitivity of Silicon Nanotube Field Effect Transistor to Structural Process Parameters", Journal of nanoelectronics and optoelectronics, vol. 12, No.10, Oct 2017, pp. pp. 1098-1104.
+4) Scarlet, S, P, Srinivasan, R and Sasikala, P, ‘Nanoscale Junctionless Devices Using RingFET Structure on Bulk Silicon Substrate’, International Journal of Electronic Letters (Taylor and Francis)., vol. 1724, pp. 1–13, 468-480, Oct 2017.
+5) Priscilla Scarlet, and R Srinivasan, “Performance Optimisation of Junctionless FET in Nano regime using Segmented Channel- A 3D Numerical simulation study” Superlattices and Microstructures (Elsevier Publisher), Vol. 111, pp.1233-1243, Nov 2017.
+
+Dr. A. Shahina : 1
+--------------------------
+
+1) An Analysis of The Effect of Combining Standard and Alternate Sensor Signals on Recognition of Syllabic Units for Multimodal Speech Recognition  Published on : 2018-11-01
+Dr. T. Sree Sharmila : 10
+--------------------------
+
+1) A two-level secure data hiding algorithm for video steganography  Published on : 2018-03-20
+
+2) Optic disc and cup segmentation in fundus retinal images using feature detection and morphological techniques  Published on : 2018-08-01
+
+3) An efficient framework for image retrieval using color, texture and edge features  Published on : 2018-08-01
+
+4) Real time blink recognition from various head pose using single eye  Published on : 2018-12-01
+
+5) Disc bulge diagnostic model in axial lumbar MR images using Intervertebral disc Descriptor  Published on : 2018-10-01
+
+6) A wavelet transform based contrast enhancement method for underwater acoustic images  Published on : 2018-10-01
+
+7) Image fusion for MODIS and Landsat images using top hat based moving technique with FIS  Published on : 2018-01-30
+
+8) G.S.Priyadharsini, T. Sree Sharmila, L.K. Pavithra, “Color clustering based color feature extraction in content based image retrieval”, International Journal of Computer and Mathematical Sciences, Vol. 6, Issue. 8, pg. 63-66, Aug 2017.
+
+9) Sharmila R, Sree Sharmila T, “Study of landslide-prone area detection using remote sensing techniques”, International Journal of Computer and Mathematical Sciences, Vol. 6, Issue. 8, pg. 55-60, Aug 2017.
+
+10) Sree Sharmila T, Pavithra L K, Aneerudh P, “Rubik’s cube solution in augmented reality environment”, International Journal of Computer and Mathematical Sciences, Vol. 6, Issue. 8, pg. 45-51, Aug 2017.
+
+
+Dr. S. Chitra : 8
+--------------------------
+
+1) Brain storm-based Whale Optimization Algorithm for privacy protected data publishing in cloud computing  Published on : 2018-02-28
+
+2) A Lightweight Trust Scheme for Iot.  Published on : 2018-09-01
+
+3) Performance analysis of IoT protocol under different mobility models  Published on : 2018-11-01
+
+4) An Empirical Study of Feature Selection Methods over Classification Algorithms  Published on : 2018-01-01
+
+5) Enhanced Portable Text To Speech Converter For Visually Impaired  Published on : 2018-01-01
+
+6) BCI Cinematicsâ€“A pre-release analyser for movies using H2O deep learning platform  Published on : 2018-03-01
+
+7) Yoganand.S and Dr.S.Chithra, “Condition Monitoring of Small Wind Turbines using IoT (A- Statistical Survey and Analysis)”, International Journal of Computer & Mathematical Sciences, ISSN 2347 – 8527, Volume 6, Issue 7 July 2017.
+
+8) M.Srisivanandhini and Dr. S.Chithra, “Implementation and Analysis of LPWAN Technology using LoRa Architecture”, International Journal of Engineering Technology Science and Research, IJETSR, ISSN 2394 – 3386, Volume 4, Issue 10, October 2017.
+
+Dr. N. Bhalaji : 8
+--------------------------
+
+1) An augmented approach for pseudo-free groups in smart cyber-physical system  Published on : 2018-03-10
+
+2) A Lightweight Trust Scheme for Iot.  Published on : 2018-09-01
+
+3) Performance analysis of IoT protocol under different mobility models  Published on : 2018-11-01
+
+4) An Empirical Study of Feature Selection Methods over Classification Algorithms  Published on : 2018-01-01
+
+5) Enhanced Portable Text To Speech Converter For Visually Impaired  Published on : 2018-01-01
+
+6) BCI Cinematicsâ€“A pre-release analyser for movies using H2O deep learning platform  Published on : 2018-03-01
+
+7) Behavioral Modeling for Mental Health using Machine Learning Algorithms  Published on : 2018-05-01
+
+8) New Optimized Distributed Scheduling Service using Genetic Computing  Published on : 2018-11-01
+
+Dr. S. Karthika : 4
+--------------------------
+
+1) Identification of Trending Topics Using Periodically Collected Twitter Data  Published on : 2018-07-01
+
+2) Categorisation of Tweets Using Ensemble Classification Methods  Published on : 2018-07-01
+
+3) Analysis of machine learning algorithm for identifying key players in covert networks  Published on : 2018-02-01
+
+4) MutatedSocioAgentSim (MSAS): semi supervised modelling of multiagent simulation to predict and detect the mutation in a camouflaged social network  Published on : 2018-03-01
+
+Dr. S. Poornima : 2
+--------------------------
+
+1) Mobile Application For Out-Pass Generation  Published on : 2018-07-01
+
+2) Outlier Detection using Clustering Techniques  Published on : 2018-07-01
+
+Dr. S. Mohanavalli : 5
+--------------------------
+
+1) Identification of Trending Topics Using Periodically Collected Twitter Data  Published on : 2018-07-01
+
+2) Categorisation of Tweets Using Ensemble Classification Methods  Published on : 2018-07-01
+
+3) Outlier Detection using Clustering Techniques  Published on : 2018-07-01
+
+4) Behavioral Modeling for Mental Health using Machine Learning Algorithms  Published on : 2018-05-01
+
+5) Optimized bi-level classifier for brain tumor type and grade discrimination using evolutionary fuzzy computing  Published on : 2018-11-01
+
+Dr. N. Sripriya : 3
+--------------------------
+
+1) Mobile Application For Out-Pass Generation  Published on : 2018-07-01
+
+2) Outlier Detection using Clustering Techniques  Published on : 2018-07-01
+
+3) Significance of Differenced EGG Signal as a Spectrum in Phase-Difference Computation for the Estimation of Glottal Closure Instants  Published on : 2018-05-01
+
+Dr. K. R. Uthayan : 1
+--------------------------
+
+1) Categorisation of Tweets Using Ensemble Classification Methods  Published on : 2018-07-01
+
+Dr. I.. Joe Louis Paul : 1
+--------------------------
+
+1) A Working Model for Mobile Charging using Wireless Power Transmission  Published on : 2018-07-01
+
+2) I. Joe Louis Paul, S. Sasirekha, “A safety system for school children using GRAG", International Journal of Computer Aided Engineering and Technology, Inderscience Publishers 
+
+Dr. P. Vasuki : 1
+--------------------------
+
+1) A Smart Watchdog - Intruder Detection System  Published on : 2018-08-01
+
+
+
+Dr. S. Sasirekha : 1
+--------------------------
+
+1) A Working Model for Mobile Charging using Wireless Power Transmission  Published on : 2018-07-01
+2) I. Joe Louis Paul, S. Sasirekha, “A safety system for school children using GRAG", International Journal of Computer Aided Engineering and Technology, Inderscience Publishers 
+3) Sasirekha Selvakumar, and Sankaranarayanan Swamynathan. "Cluster-chain mobile agent routing algorithm for efficient data aggregation in wireless sensor network." Journal of Communications and Networks vol. 19, no. 4, Aug 2017, pp. 392-401
+
+
+Dr. E. M. Malathy : 1
+--------------------------
+
+1) State of Art: Vertical Handover Decision Schemes in Next-Generation Wireless Network  Published on : 2018-03-21
+
+
+Mr. Vinob Chnader : 1
+---------------------
+
+1) R. Vinob chander, Saswati Mukherjee, Susan Elias, “An Applications Interoperability Model for heterogeneous Internet of Things Environments”, Computers and Electrical Engineering, Elsevier, 64, 163-172, Nov 2017.
+
+
+Ms. Srividya : 4
+--------------------------
+
+1) Identification of Trending Topics Using Periodically Collected Twitter Data  Published on : 2018-07-01
+
+2) Categorisation of Tweets Using Ensemble Classification Methods  Published on : 2018-07-01
+
+3) Outlier Detection using Clustering Techniques  Published on : 2018-07-01
+
+4) Behavioral Modeling for Mental Health using Machine Learning Algorithms  Published on : 2018-05-01
+
+
+Ms. N. Radha : 4
+--------------------------
+
+1) Text to Speech Conversion of Documents using Concatenative Speech Synthesis  Published on : 2018-02-01
+
+2) Embodied Conversational Agent-based Control Interfaces for Home Automation System  Published on : 2018-02-01
+
+3) Automatic Gender recognition using ANFIS  Published on : 2018-02-01
+
+4) An Analysis of The Effect of Combining Standard and Alternate Sensor Signals on Recognition of Syllabic Units for Multimodal Speech Recognition  Published on : 2018-11-01
+
+Ms. T. Shanmughapriya : 1
+--------------------------
+
+1) Reliability score inference and recommendation using fuzzy-based technique for social media applications  Published on : 2018-12-01
+
+
+Ms. J. Sofia Jennifer : 1
+--------------------------
+
+1) Real time blink recognition from various head pose using single eye  Published on : 2018-12-01
+
+
+
+Ms. R. Swathika : 1
+--------------------------
+
+1) Image fusion for MODIS and Landsat images using top hat based moving technique with FIS  Published on : 2018-01-30
+
+
+Mr. A. Sandana Karuppan : 1
+--------------------------
+
+1) New Optimized Distributed Scheduling Service using Genetic Computing  Published on : 2018-11-01
+
+
+Mr. K. Kabilan : 1
+--------------------------
+
+1) Performance analysis of IoT protocol under different mobility models  Published on : 2018-11-01
+
+
+
